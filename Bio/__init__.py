@@ -134,14 +134,14 @@ if os.path.exists(os.path.join(_parent_dir, "setup.py")):
         os.path.join(site.getusersitepackages(), "biopython.egg-link")
     ):
         _dev_mode = True
-    if not _dev_mode:
-        warnings.warn(
-            "You may be importing Biopython from inside the source tree."
-            " This is bad practice and might lead to downstream issues."
-            " In particular, you might encounter ImportErrors due to"
-            " missing compiled C extensions. We recommend that you"
-            " try running your code from outside the source tree."
-            " If you are outside the source tree then you have a"
-            " setup.py file in an unexpected directory: " + _parent_dir,
-            BiopythonWarning,
-        )
+    # if not _dev_mode:
+    #     warnings.warn(
+    #         "You may be importing Biopython from inside the source tree."
+    #         " This is bad practice and might lead to downstream issues."
+    #         " In particular, you might encounter ImportErrors due to"
+    #         " missing compiled C extensions. We recommend that you"
+    #         " try running your code from outside the source tree."
+    #         " If you are outside the source tree then you have a"
+    #         " setup.py file in an unexpected directory: " + _parent_dir,
+    #         BiopythonWarning,
+    #     )
